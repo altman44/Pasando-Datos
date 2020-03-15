@@ -1,13 +1,59 @@
-<div class="text-center">
+<style>
+    form label{
+        display:inline-block;
+    }
+    .data{
+        width:30%;
+        border-style:groove;
+        border-color:#7474BF;
+        
+        background: #4B79A1;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    }
+    .input-login{
+        border:none;
+        border-bottom:1px solid rgb(121, 119, 240);
+        background-color: inherit;
+    }
+    #btn-login{
+        background: #FFEFBA;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color:black;
+        border:none;
+    }
+    #btn-login:hover{
+        background: #FFEFBA;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .label-login:hover{
+        cursor: pointer;
+    }
+</style>
+<div class="text-center text-white">
     <h1>Bienvenido Sr. Usuario</h1>
 </div>
-<div class="container text-center rounded-lg bg-dark">
-    <form action="/login" method="post">
-        <form class="form-group">
-            <input type="text" name="name" class="rounded">
+<div class="container text-center p-4 data text-white">
+        <form action="/signin" method="POST" class="p-4">
+            <div class="form-group">
+                <div>
+                    <label class="label-login" for="username">Usuario</label>
+                </div>
+                <input id="username" type="text" name="username" class="input-login">
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="pwd" class="label-login">Contraseña</label>
+                </div>
+                <input id="pwd" type="password" name="pwd" class="input-login">
+            </div>
+            <div class="form-group ">
+                <input id="btn-login" type="submit" class="btn btn-block" value="SignIn"></input>
+            </div>
         </form>
-        <form class="form-group">
-            <input type="text" name="password" class="rounded">
-        </form>
-    </form>
 </div>
